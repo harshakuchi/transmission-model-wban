@@ -1,0 +1,2 @@
+scenario,mode,anomalyRate,seed,energyConsumed,averageEnergyConsumed,remainingEnergy,packetsGenerated,packetsOffered,packetsTransmitted,packetsReceived,packetLoss,pdr,averageDelay,throughput,anomaliesGenerated,anomaliesReceived,anomalyDeliveryRatio,anomalyDelay,txFrames,rxFrames,retransmissions,initialEnergy,initialEnergyTotal
+wban,proposed,0.3,2,0.0938623,0.0156437,59.9061,290,138,138,138,0,1,0.00303676,588.8,84,84,1,0.00305372,222,1110,84,10,60
