@@ -72,20 +72,3 @@ The simulation accepts `mode`, `anomalyRate`, `simulationTime`, `numSensors`, `p
 ## Results
 
 See [docs/results.md](docs/results.md) for the measured smoke and experiment results. Re-run the suite to regenerate the CSV data and plots.
-
-## Limitations
-
-- Synthetic readings and thresholds are not medical-grade data or clinical decision rules.
-- The current LR-WPAN setup uses broadcast MAC delivery and has no routing, interference model tailored to a body, or link-layer anomaly priority queue.
-- Alarm duplication is the implemented delivery enhancement; it is not adaptive ARQ based on a feedback channel.
-- Energy excludes idle listening, sensing, processor use, and detailed battery effects.
-- MAC frame loss is represented through actual receive callbacks; the default close-in body topology tends to have high PDR.
-- Throughput is application payload bits delivered per simulation second.
-
-## Future work
-
-Add an LR-WPAN radio state energy model, body-channel measurements, explicit coordinator acknowledgements and retries, adaptive sampling, aggregation, more realistic medical datasets under appropriate approvals, confidence-aware anomaly detection, and machine-learning detectors trained and validated separately from the test runs.
-
-## Viva summary
-
-The contribution is a reproducible simulation comparison: suppress routine sensor reports to reduce active radio energy, while immediately forwarding and duplicating abnormal reports. The measured results distinguish generated readings from transmitted records and use actual MAC receive events for delivery metrics. See [docs/viva_questions.md](docs/viva_questions.md) for preparation questions.
